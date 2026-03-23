@@ -1,13 +1,16 @@
 # 🤖 Machine Learning Lab Environment (KNN, Regression & Neural Networks)
 
-A complete local setup for learning and implementing core **Machine Learning algorithms** including:
+A structured and practical machine learning project developed from Google Colab notebooks and organized into a clean, professional local environment.
+
+This repository covers core **Machine Learning algorithms and workflows**, including:
 
 * K-Nearest Neighbors (KNN)
 * Linear Regression
 * Logistic Regression
 * Neural Networks (TensorFlow/Keras)
+* Model Evaluation & Fine-Tuning
 
-This project provides a **hands-on environment** for preprocessing data, training models, evaluating performance, and visualizing results using Python.
+It provides a **step-by-step learning pipeline**, from data preprocessing to advanced modeling.
 
 ---
 
@@ -36,9 +39,9 @@ Or:
 
 ---
 
-## ▶️ 3. Start Learning
+## ▶️ 3. Run Notebooks
 
-Open the notebooks in the `notebooks/` folder and run cells using:
+Open files in the `notebooks/` folder and execute cells using:
 
 ```
 Shift + Enter
@@ -48,26 +51,45 @@ Shift + Enter
 
 # 📁 Project Structure
 
+This project was originally built in Google Colab and has been reorganized for clarity and professional use.
+
 ```
-├── 📓 notebooks/              # Jupyter notebooks for each ML task
-│   ├── data_preprocessing.ipynb      # Task 1: Data cleaning & preparation
-│   ├── linear_regression.ipynb       # Task 2: Linear Regression model
-│   ├── knn_classifier.ipynb          # Task 3: KNN implementation
-│   ├── logistic_regression.ipynb     # Binary classification
-│   ├── neural_networks.ipynb         # Deep learning with Keras
-│   └── visualization.ipynb           # Graphs & model evaluation
+├── 📓 notebooks/                # Main learning notebooks (ordered)
+│   ├── 01_data_preprocessing.ipynb
+│   ├── 02_linear_regression.ipynb
+│   ├── 03_knn_classifier.ipynb
+│   ├── 04_logistic_regression.ipynb
+│   ├── 05_neural_networks.ipynb
+│   ├── 06_model_evaluation.ipynb
+│   ├── 07_finetuning.ipynb
+│   ├── 08_advanced_tasks.ipynb
+│   └── FINAL_TASK.ipynb
 │
-├── 🔧 scripts/                # Utility scripts
-│   ├── launch_jupyter.ps1
-│   ├── test_setup.py
-│   └── verify_setup.py
-│
-├── 📊 data/                   # Datasets used for training/testing
-├── 📁 outputs/                # Model outputs and visualizations
-├── 🐍 .venv/                  # Virtual environment
-├── 📄 requirements.txt        # Dependencies
-└── 📄 .gitignore
+├── 📊 data/                     # Datasets
+├── 📁 outputs/                  # Results, plots, predictions
+├── 📚 docs/                     # Extra notes/documentation (optional)
+├── 🐍 .venv/                    # Virtual environment
+├── 📄 requirements.txt          # Dependencies
+└── 📄 README.md
 ```
+
+---
+
+# 🧠 Learning Flow
+
+Follow the notebooks in order for the best understanding:
+
+1. **Data Preprocessing**
+2. **Linear Regression**
+3. **KNN Classifier**
+4. **Logistic Regression**
+5. **Neural Networks**
+6. **Model Evaluation**
+7. **Fine-Tuning**
+8. **Advanced Tasks**
+9. **Final Integrated Project**
+
+Each notebook builds on the previous one.
 
 ---
 
@@ -80,7 +102,7 @@ Shift + Enter
 * Handle missing values (mean, median, drop)
 * Encode categorical variables (One-hot, Label Encoding)
 * Normalize / Standardize features
-* Split dataset into training & testing sets
+* Train-test split
 
 ---
 
@@ -91,14 +113,14 @@ Shift + Enter
 * Evaluate using:
 
   * Mean Squared Error (MSE)
-  * R-squared (R²)
+  * R² Score
 
 ---
 
-## 🔹 Task 3: K-Nearest Neighbors (KNN)
+## 🔹 Task 3: KNN Classifier
 
-* Train KNN classifier
-* Experiment with different values of **K**
+* Train KNN model
+* Experiment with different **K values**
 * Evaluate using:
 
   * Accuracy
@@ -109,7 +131,7 @@ Shift + Enter
 
 ## 🔹 Task 4: Logistic Regression
 
-* Binary classification model
+* Binary classification
 * Interpret coefficients & odds ratio
 * Evaluate using:
 
@@ -119,23 +141,37 @@ Shift + Enter
 
 ---
 
-## 🔹 Task 5: Neural Networks (TensorFlow/Keras)
+## 🔹 Task 5: Neural Networks
 
-* Build neural network architecture
+* Build deep learning models (Keras)
 * Train using backpropagation
-* Evaluate performance
-* Visualize training & validation loss
+* Evaluate accuracy
+* Visualize loss curves
+
+---
+
+## 🔹 Task 6–8: Advanced Topics
+
+* Model evaluation techniques
+* Fine-tuning models
+* Experimentation and improvements
+
+---
+
+## 🔹 Final Task
+
+* Combines all concepts into a complete ML pipeline project
 
 ---
 
 # ⚙️ Technologies Used
 
 * **Python 3.x**
-* **pandas** – Data handling
-* **NumPy** – Numerical computations
-* **scikit-learn** – Machine learning models
+* **pandas** – Data processing
+* **NumPy** – Numerical computation
+* **scikit-learn** – ML algorithms
 * **TensorFlow / Keras** – Deep learning
-* **matplotlib** – Data visualization
+* **matplotlib** – Visualization
 
 ---
 
@@ -152,65 +188,61 @@ print(confusion_matrix(y_test, y_pred))
 
 # 🧠 Key Learning Outcomes
 
-By working on this project, you will understand:
+By completing this project, you will understand:
 
-* How to preprocess real-world datasets
-* How different ML algorithms work
-* How to evaluate model performance
+* Data preprocessing techniques
+* Supervised learning models
+* Model evaluation metrics
 * Differences between:
 
   * KNN (distance-based)
-  * Regression models (linear)
-  * Neural networks (non-linear)
+  * Regression (linear models)
+  * Neural networks (non-linear learning)
 
 ---
 
 # 🛠️ Troubleshooting
 
-### ❌ "No module found"
+### ❌ Module not found
 
-👉 Activate the virtual environment and reinstall dependencies
+👉 Activate virtual environment and reinstall dependencies
 
 ### ❌ Jupyter not opening
-
-👉 Run:
 
 ```powershell
 .venv\Scripts\jupyter notebook
 ```
 
-### ❌ Wrong kernel
+### ❌ Wrong kernel selected
 
-👉 Select:
+👉 Choose:
 
 ```
-Python (your virtual environment)
+Python (.venv)
 ```
 
 ---
 
 # 🎯 How to Use This Repo
 
-1. Start with **data_preprocessing.ipynb**
-2. Move to **linear_regression.ipynb**
-3. Try **knn_classifier.ipynb**
-4. Explore **logistic_regression.ipynb**
-5. Finish with **neural_networks.ipynb**
+* Follow notebooks in order
+* Run all cells step-by-step
+* Modify parameters (K, epochs, etc.)
+* Test with your own datasets
 
 ---
 
 # 🎓 Disclaimer
 
-This project is for **educational purposes only** and is designed to help understand machine learning concepts.
+This project is for **educational purposes only** and demonstrates core machine learning concepts.
 
 ---
 
 # 🎉 You're Ready!
 
-* Run notebooks
+* Explore the notebooks
 * Experiment with models
-* Try different datasets
-* Improve your ML skills 🚀
+* Build your own ML projects 🚀
 
 ---
 
